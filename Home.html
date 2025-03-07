@@ -1,0 +1,383 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kennedy Taylor - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style> 
+        html, body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f1f1f1;
+            color: #333;
+        }
+        header {
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 40px;
+            text-align: center;
+            font-size: 2em;
+            border-bottom: 3px solid #ecf0f1;
+        }
+        section {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 30px;
+            background: #ffffff;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            transition: all 0.3s ease-in-out;
+        }
+        section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+        }
+        h2 {
+            font-family: 'Poppins', sans-serif;
+            color: #2c3e50;
+            border-bottom: 2px solid #2980b9;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        p, ul {
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li::before {
+            content: "\2022";
+            color: #2980b9;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+        a {
+            color: #2980b9;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+            color: #3498db;
+        }
+        iframe {
+            border: none;
+            margin-bottom: 20px;
+        }
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            font-size: 0.9em;
+        }
+        .carousel-container {
+            display: flex;
+            overflow-x: auto;
+            gap: 20px;
+            white-space: nowrap;
+            padding: 10px;
+            margin-top: 20px;
+        }
+        .carousel-item {
+            text-align: center;
+            margin-bottom: 30px;
+            flex: 0 0 auto;
+            width: 90%;
+            background-color: #ecf0f1;
+            border-radius: 10px;
+            padding: 10px;
+            transition: transform 0.3s ease;
+        }
+        .carousel-item:hover {
+            transform: scale(1.05);
+        }
+        .carousel-item iframe {
+            width: 100%;
+            height: 500px;
+        }
+        .landscape iframe {
+            height: 500px;
+        }
+        .portrait iframe {
+            height: 700px;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .reference-item, .contact-item {
+            background-color: #ffffff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        .reference-item:hover, .contact-item:hover {
+            transform: scale(1.05);
+        }
+        .button {
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-align: center;
+            font-weight: bold;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        .button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <!-- Floating Scroll Buttons -->
+    <div style="position: fixed; bottom: 20px; right: 20px; z-index: 1000;">
+        <a href="#excel-projects-section" style="display: block; background-color: #2980b9; color: #fff; padding: 8px 15px; margin-bottom: 8px; border-radius: 20px; font-size: 1.2em; text-align: center; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); cursor: pointer; transition: background-color 0.3s ease;">
+            Excel
+        </a> 
+        <a href="#html-section" style="display: block; background-color: #2980b9; color: #fff; padding: 8px 15px; margin-bottom: 8px; border-radius: 20px; font-size: 1.2em; text-align: center; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); cursor: pointer; transition: background-color 0.3s ease;">
+            HTML
+        </a>
+        <a href="#movies-section" style="display: block; background-color: #2980b9; color: #fff; padding: 8px 15px; margin-bottom: 8px; border-radius: 20px; font-size: 1.2em; text-align: center; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); cursor: pointer; transition: background-color 0.3s ease;">
+            Movies
+        </a>
+        <a href="#resume-section" style="display: block; background-color: #2980b9; color: #fff; padding: 8px 15px; margin-bottom: 8px; border-radius: 20px; font-size: 1.2em; text-align: center; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); cursor: pointer; transition: background-color 0.3s ease;">
+            Resume
+        </a>
+        <a href="#references-section" style="display: block; background-color: #2980b9; color: #fff; padding: 8px 15px; margin-bottom: 8px; border-radius: 20px; font-size: 1.2em; text-align: center; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); cursor: pointer; transition: background-color 0.3s ease;">
+            References
+        </a> 
+        <a href="#certifications-section" style="display: block; background-color: #2980b9; color: #fff; padding: 8px 15px; margin-bottom: 8px; border-radius: 20px; font-size: 1.2em; text-align: center; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); cursor: pointer; transition: background-color 0.3s ease;">
+            Certifications
+        </a>
+       
+        <a href="#contact-section" style="display: block; background-color: #2980b9; color: #fff; padding: 8px 15px; margin-bottom: 8px; border-radius: 20px; font-size: 1.2em; text-align: center; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); cursor: pointer; transition: background-color 0.3s ease;">
+            Contact
+        </a>
+    </div>
+ 
+    
+   
+    </section>
+    <header>
+        <h1>Kennedy Taylor</h1>
+        <p>Film Industry Professional | Executive Assistant | Editor | Designer</p>
+    </header>
+    
+    <section style="background-color: #2980b9; color: white; padding: 80px 0; text-align: center;">
+        <h2 style="font-family: 'Poppins', sans-serif; font-size: 3em; margin-bottom: 20px;">About Me</h2>
+        <p style="font-size: 1.2em; max-width: 800px; margin: 0 auto 40px auto; line-height: 1.6; font-weight: 300;">
+            <span style="font-weight: 500; font-size: 1.3em;">Hi, I'm Kennedy Taylor.</span><br><br>
+            As an Executive Assistant, I excel at managing the many moving parts of fast-paced environments. From overseeing administrative tasks to providing seamless support, I ensure everything runs like clockwork. But what truly sets me apart is my unique blend of organizational skills and creative problem-solving. Whether it’s designing an efficient workflow or creatively organizing complex schedules, I thrive on making systems function effortlessly while infusing a touch of creativity.<br><br>
+            With a passion for both structure and innovation, I’m always looking for ways to optimize processes, anticipate needs, and bring new ideas to life. I’m driven by the challenge of making things happen and providing a behind-the-scenes experience that’s as dynamic as it is effective.
+        </p>
+    </section>
+    
+    
+
+    <section id="excel-projects-section" style="background-color: #ecf0f1; padding: 60px 0;">
+        <h2 style="text-align: center; font-size: 2.5em; color: #2c3e50; font-family: 'Poppins', sans-serif; margin-bottom: 40px;">Excel & Word Projects</h2>
+        
+        <div class="carousel-container" style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: center;">
+            <div class="carousel-item" style="flex: 1 1 300px; background-color: #fff; border-radius: 10px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease-in-out;">
+                <h3 style="text-align: center; color: #2980b9; font-size: 1.5em; padding: 20px 0; font-family: 'Poppins', sans-serif;">Excel Example 1</h3>
+                <embed src="https://drive.google.com/file/d/1L2H-lg_nDhED8gUvGw3nnMYgHafjKUEn/preview" width="100%" height="500" scrolling="no" style="border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);" />
+            </div>
+            
+            <div class="carousel-item" style="flex: 1 1 300px; background-color: #fff; border-radius: 10px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease-in-out;">
+                <h3 style="text-align: center; color: #2980b9; font-size: 1.5em; padding: 20px 0; font-family: 'Poppins', sans-serif;">Excel Example 2</h3>
+                <embed src="https://drive.google.com/file/d/1-u2mFBPPaNL7IQo0CS45sDAVKVMYVV2A/preview" width="100%" height="700" scrolling="no" style="border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);" />
+            </div>
+            
+            <div class="carousel-item" style="flex: 1 1 300px; background-color: #fff; border-radius: 10px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease-in-out;">
+                <h3 style="text-align: center; color: #2980b9; font-size: 1.5em; padding: 20px 0; font-family: 'Poppins', sans-serif;">Excel Example 3</h3>
+                <embed src="https://drive.google.com/file/d/1lH_BQPXC092n9ORW9LcmsNzspcZXO6K7/preview" width="100%" height="700" scrolling="no" style="border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);" />
+            </div>
+    
+            <div class="carousel-item" style="flex: 1 1 300px; background-color: #fff; border-radius: 10px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease-in-out;">
+                <h3 style="text-align: center; color: #2980b9; font-size: 1.5em; padding: 20px 0; font-family: 'Poppins', sans-serif;">Excel Example 4</h3>
+                <embed src="https://drive.google.com/file/d/1LL1BHtjJd-OCpdJgwOR6R8R71thlIDII/preview" width="100%" height="700" scrolling="no" style="border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);" />
+            </div>
+    
+            <div class="carousel-item" style="flex: 1 1 300px; background-color: #fff; border-radius: 10px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease-in-out;">
+                <h3 style="text-align: center; color: #2980b9; font-size: 1.5em; padding: 20px 0; font-family: 'Poppins', sans-serif;">Excel Example 5</h3>
+                <embed src="https://drive.google.com/file/d/1Z02Ujm05sPnAi83oD4lWzp8aVFIIkOQW/preview" width="100%" height="700" scrolling="no" style="border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);" />
+            </div>
+    
+            <div class="carousel-item" style="flex: 1 1 300px; background-color: #fff; border-radius: 10px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease-in-out;">
+                <h3 style="text-align: center; color: #2980b9; font-size: 1.5em; padding: 20px 0; font-family: 'Poppins', sans-serif;">Word Pamphlet Example</h3>
+                <embed src="https://drive.google.com/file/d/1hUJjsMZIJB6I-ZrWqSU-cqqxbjX6nYzd/preview" width="100%" height="700" scrolling="no" style="border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);" />
+            </div>
+        </div>
+    </section>
+    
+    
+    <section id="html-section" style="background-color: #f0f4f7; padding: 60px 0; border-top: 5px solid #2980b9;">
+        <h2 style="text-align: center; font-size: 2.5em; color: #2c3e50; font-family: 'Poppins', sans-serif; margin-bottom: 40px;">HTML Projects
+        <p style="font-size: .50EM; color: black; text-align: center; margin-top: 20px;">
+            This website was created and coded by me using Java and HTML.
+         </p></h2>
+        
+        <div class="carousel-container" style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: center; transition: all 0.3s ease-in-out;">
+            <!-- Project 1 -->
+            <div class="carousel-item" style="flex: 1 1 300px; background-color: #fff; border-radius: 10px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease-in-out;">
+                <h3 style="text-align: center; color: #2980b9; font-size: 1.6em; padding: 20px 0; font-family: 'Poppins', sans-serif;">Technical Documentation</h3>
+                <iframe src="https://drive.google.com/file/d/1qO2dqGcmyF-fE_oGbuBpcisE5T54L5Cw/preview" width="100%" height="700" style="border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);" allow="autoplay"></iframe>
+            </div>
+    
+            <!-- Project 2 -->
+            <div class="carousel-item" style="flex: 1 1 300px; background-color: #fff; border-radius: 10px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease-in-out;">
+                <h3 style="text-align: center; color: #2980b9; font-size: 1.6em; padding: 20px 0; font-family: 'Poppins', sans-serif;">Survey Form</h3>
+                <iframe src="https://drive.google.com/file/d/16L8I277r0VsCZDSsdWBfA0DoV7cgnSg0/preview" width="100%" height="700" style="border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);" allow="autoplay"></iframe>
+            </div>
+    
+            <!-- Project 3 -->
+            <div class="carousel-item" style="flex: 1 1 300px; background-color: #fff; border-radius: 10px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease-in-out;">
+                <h3 style="text-align: center; color: #2980b9; font-size: 1.6em; padding: 20px 0; font-family: 'Poppins', sans-serif;">Tribute Page</h3>
+                <iframe src="https://drive.google.com/file/d/1nrB1xTD97MRoCRJPaEPpAm94z0PG8nSs/preview" width="100%" height="700" style="border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);" allow="autoplay"></iframe>
+            </div>
+    
+            <!-- Project 4 -->
+            <div class="carousel-item" style="flex: 1 1 300px; background-color: #fff; border-radius: 10px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease-in-out;">
+                <h3 style="text-align: center; color: #2980b9; font-size: 1.6em; padding: 20px 0; font-family: 'Poppins', sans-serif;">Landing Page</h3>
+                <iframe src="https://drive.google.com/file/d/1wPQ9Wye8aLncwEs6otEa6V3qE1H6RmOP/preview" width="100%" height="700" style="border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);" allow="autoplay"></iframe>
+            </div>
+        </div>
+    
+    </section>
+    
+    
+    <section id="movies-section">
+        <h2>Movies</h2>
+        <div class="carousel-container">
+            <div class="carousel-item landscape">
+                <strong>Believer - Imagine Dragons - 2016</strong>
+                <br>
+                <iframe src="https://player.vimeo.com/video/289215638?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="872" height="480" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" title="Believer Contest Submission"></iframe>
+            </div>
+            <div class="carousel-item landscape">
+                <strong>Homeless Inhumanity - 2016, Student Project</strong>
+                <br>
+                <iframe src="https://drive.google.com/file/d/1uMHKVWXGsmtWoT7gJzu5sZmFT_8W-lCd/preview" width="1920" height="1080" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" title="Homeless Inhumanity"></iframe>
+            </div>
+            <div class="carousel-item landscape">
+                <strong>Stuck in the Game - 2016, Student project</strong>
+                <br>
+                <iframe src="https://drive.google.com/file/d/1kngAyK1cBbJPjFmB15BGG5gF_JiPrNmW/preview" width="1920" height="1080" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" title="Stuck to the Game"></iframe>"></iframe>
+            </div>
+            <div class="carousel-item landscape">
+                <strong>Simon and Ellie - 2017, Student Project</strong>
+                <br>
+                <iframe src="https://drive.google.com/file/d/11yT4WyhlwpxvnlZQn21jTXbRsuDICEKq/preview" width="1920" height="1080" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" title="Simon and Ellie"></iframe>
+            </div>
+        </div>
+    </section>
+    <section id="resume-section" style="background-color: #eaf2f8; padding: 60px 0; text-align: center; border-top: 5px solid #2980b9;">
+        <h2 style="font-size: 2.5em; color: #2c3e50; font-family: 'Poppins', sans-serif; margin-bottom: 40px;">My Resume</h2>
+    
+        <div class="resume-container" style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap;">
+            <!-- Resume Preview Section -->
+            <div class="resume-preview" style="flex: 1 1 45%; background-color: #fff; padding: 30px; border-radius: 10px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease-in-out;">
+                <h3 style="font-size: 1.8em; color: #2980b9; font-family: 'Poppins', sans-serif; margin-bottom: 20px;">Resume Preview</h3>
+                <iframe src="https://drive.google.com/file/d/1HlNpvtH0Y6_JGs1789oKNw7dTaoJdo8a/preview" width="100%" height="600" style="border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);" allow="autoplay"></iframe>
+            </div>
+    
+            <!-- Download Link Section -->
+            <div class="resume-download" style="flex: 1 1 45%; background-color: #fff; padding: 30px; border-radius: 10px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease-in-out;">
+                <h3 style="font-size: 1.8em; color: #2980b9; font-family: 'Poppins', sans-serif; margin-bottom: 20px;">Download My Resume</h3>
+                <p style="font-size: 1.2em; margin-bottom: 20px; color: #333;">Click below to download my full resume in PDF format and explore my experience and skills.</p>
+                <a href="https://drive.google.com/uc?export=download&id=1HlNpvtH0Y6_JGs1789oKNw7dTaoJdo8a" download="Kennedy_Taylor_Resume.pdf" style="font-size: 1.2em; color: #fff; background-color: #2980b9; padding: 15px 30px; border-radius: 5px; text-decoration: none; transition: background-color 0.3s ease;">
+                    Download Resume
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    
+    <!-- References Section -->
+<section id="references-section" style="background-color: #f1f8fe; padding: 60px 0; text-align: center; border-top: 5px solid #2980b9;">
+    <h2 style="font-size: 2.5em; color: #2c3e50; font-family: 'Poppins', sans-serif; margin-bottom: 40px;">References</h2>
+    
+    <div class="grid-container" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 30px; justify-items: center;">
+        <!-- Reference Item -->
+        <div class="reference-item" style="background-color: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+            <strong style="font-size: 1.5em; color: #2980b9;">Williams Michele</strong>
+            <p>Phone: 512-689-30491</p>
+            <p>Email: <a href="mailto:michele@motleyproductions.com" style="color: #2980b9; text-decoration: none;">michele@motleyproductions.com</a></p>
+        </div>
+        
+        <div class="reference-item" style="background-color: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+            <strong style="font-size: 1.5em; color: #2980b9;">Jessica Abarca</strong>
+            <p>Phone: 323-610-5227</p>
+            <p>Email: <a href="mailto:j_abarca5@yahoo.com" style="color: #2980b9; text-decoration: none;">j_abarca5@yahoo.com</a></p>
+        </div>
+        
+        <div class="reference-item" style="background-color: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+            <strong style="font-size: 1.5em; color: #2980b9;">Natasha Pirouzian</strong>
+            <p>Phone: 323-481-8937</p>
+            <p>Email: <a href="mailto:natashapirouzian@gmail.com" style="color: #2980b9; text-decoration: none;">natashapirouzian@gmail.com</a></p>
+        </div>
+        
+        <div class="reference-item" style="background-color: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+            <strong style="font-size: 1.5em; color: #2980b9;">Valeria Vidaurrazaga</strong>
+            <p>Phone: 909-294-4196</p>
+            <p>Email: <a href="mailto:vvida.setdec@gmail.com" style="color: #2980b9; text-decoration: none;">vvida.setdec@gmail.com</a></p>
+        </div>
+        
+        <div class="reference-item" style="background-color: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+            <strong style="font-size: 1.5em; color: #2980b9;">Alexandra Terlesky</strong>
+            <p>Phone: +1 (818) 307-2660</p>
+            <p>Email: <a href="mailto:alexandra.t@mac.com" style="color: #2980b9; text-decoration: none;">alexandra.t@mac.com</a></p>
+        </div>
+    </div>
+</section>
+
+<!-- Certifications Section -->
+<section id="certifications-section" style="background-color: #f1f8fe; padding: 60px 0; text-align: center; border-top: 5px solid #2980b9;">
+    <h2 style="font-size: 2.5em; color: #2c3e50; font-family: 'Poppins', sans-serif; margin-bottom: 40px;">Certifications</h2>
+
+    <div class="certifications-container" style="max-width: 1000px; margin: 0 auto; text-align: left;">
+        <div class="certification-item" style="background-color: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); margin-bottom: 20px; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+            <strong style="font-size: 1.8em; color: #2980b9;">freeCodeCamp - Responsive Web Design Certification</strong>
+            <p style="font-size: 1.1em; color: #333;">Successfully completed the Responsive Web Design certification, gaining a solid understanding of HTML, CSS, and JavaScript to build responsive web pages.</p>
+            <a href="https://www.freecodecamp.org/certification/kentay2345/responsive-web-design" target="_blank" style="font-size: 1.2em; color: #fff; background-color: #2980b9; padding: 15px 30px; border-radius: 5px; text-decoration: none; transition: background-color 0.3s ease;">
+                View Certification
+            </a>
+        </div>
+    </div>
+</section>
+
+    <section id="contact-section">
+        <h2>Contact</h2>
+        <div class="grid-container">
+            <div class="contact-item">
+                Email: <a href="mailto:Kennedytaylor2345@gmail.com">Kennedytaylor2345@gmail.com</a>
+            </div>
+            <div class="contact-item">
+                Phone: <a href="tel:(818)422-5896">(818)422-5896</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Kennedy Taylor. All rights reserved.</p>
+    </footer>
+</body>
+</html>
